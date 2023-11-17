@@ -17,12 +17,12 @@ class _GalleryState extends State<Gallery> {
   Future<List<ShopList>> fetchAlbum() async {
     final response =
         await http.get(Uri.parse("https://fakestoreapi.com/products"));
-  //   if (response.statusCode == 200) {
-  //     return shopListFromJson(response.body);
-  //   } else {
-  //     return [];
-  //   }
-  // }
+    if (response.statusCode == 200) {
+      return shopListFromJson(response.body);
+    } else {
+      return [];
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
