@@ -8,21 +8,21 @@ class Gallery extends StatefulWidget {
   const Gallery({super.key});
 
   @override
-  State<Gallery> createState() => _GalleryState();
-}
+//   State<Gallery> createState() => _GalleryState();
+// }
 
-class _GalleryState extends State<Gallery> {
-  bool isLiked = false;
+// class _GalleryState extends State<Gallery> {
+//   bool isLiked = false;
 
-  Future<List<ShopList>> fetchAlbum() async {
-    final response =
-        await http.get(Uri.parse("https://fakestoreapi.com/products"));
-    if (response.statusCode == 200) {
-      return shopListFromJson(response.body);
-    } else {
-      return [];
-    }
-  }
+//   Future<List<ShopList>> fetchAlbum() async {
+//     final response =
+//         await http.get(Uri.parse("https://fakestoreapi.com/products"));
+//     if (response.statusCode == 200) {
+//       return shopListFromJson(response.body);
+//     } else {
+//       return [];
+//     }
+//   }
 
   @override
   Widget build(BuildContext context) {
